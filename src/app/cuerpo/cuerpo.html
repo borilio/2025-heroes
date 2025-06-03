@@ -1,1 +1,34 @@
-<p>cuerpo works!</p>
+<main class="container">
+
+    <div class="row">
+        <div class="col"></div>
+        
+        <div class="col-8">
+            <div class="card shadow">
+                <img src="img/portada.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <div class="card-text">
+                        <ul class="list-group">
+                            @for (heroe of listadoHeroes; track heroe) {
+                               <li 
+                                class="list-group-item" 
+                                [class]="{
+                                    'list-group-item-success': heroe.vida > 0,
+                                    'list-group-item-danger' : heroe.vida <= 0
+                                    }">
+                                    {{heroe.nombre}} Vida: {{heroe.vida}}
+                                </li>
+                            } @empty {
+                               <li class="list-group-item list-group-item-warning">Lista vacía</li> 
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col"></div>
+    </div>
+
+    
+</main>
