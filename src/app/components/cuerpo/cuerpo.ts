@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class Cuerpo {
 
   // Atributos
-  public listadoHeroes: Array<any>;
+  public listadoHeroes: Heroe[];
 
   // Constructores
   constructor() {
@@ -17,6 +17,7 @@ export class Cuerpo {
       {
         nombre: "Superman",
         imagen: "",
+        honor: 95,
         ataque: 80,
         defensa: 93,
         poder: 350,
@@ -25,6 +26,7 @@ export class Cuerpo {
       {
         nombre: "Batman",
         imagen: "",
+        honor: 80,
         ataque: 60,
         defensa: 75,
         poder: 100,
@@ -33,6 +35,7 @@ export class Cuerpo {
       {
         nombre: "Spiderman",
         imagen: "",
+        honor: 90,
         ataque: 86,
         defensa: 89,
         poder: 150,
@@ -41,6 +44,7 @@ export class Cuerpo {
       {
         nombre: "Linterna Verde",
         imagen: "",
+        honor: 90,
         ataque: 82,
         defensa: 83,
         poder: 200,
@@ -49,6 +53,7 @@ export class Cuerpo {
       {
         nombre: "Ironman",
         imagen: "",
+        honor: 82,
         ataque: 83,
         defensa: 85,
         poder: 150,
@@ -57,6 +62,7 @@ export class Cuerpo {
       {
         nombre: "Capitán America",
         imagen: "",
+        honor: 98,
         ataque: 64,
         defensa: 95,
         poder: 135,
@@ -65,6 +71,7 @@ export class Cuerpo {
       {
         nombre: "Thor",
         imagen: "",
+        honor: 75,
         ataque: 92,
         defensa: 75,
         poder: 275,
