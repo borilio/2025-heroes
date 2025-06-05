@@ -4,38 +4,10 @@
         <div class="col"></div>
         
         <div class="col-8">
-            <div class="card shadow">
-                <img src="img/portada.png" class="card-img-top" alt="">
-                <div class="card-body">
-                    <div class="card-text">
-                        @if (listadoHeroes.length > 0) {
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Imagen</th>
-                                        <th>Nombre</th>
-                                        <th>Poder</th>
-                                        <th>Vida</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @for(heroe of listadoHeroes; track heroe) {
-                                        <tr>
-                                            <td><img class="avatar" [src]="heroe.imagen || 'https://borilio.github.io/curso-angular/img/avatars/defaultheroe.svg'"/></td>                                            
-                                            <td>{{heroe.nombre}}</td>
-                                            <td>{{heroe.poder}}</td>
-                                            <td><meter [value]="heroe.vida" min="0" max="100" low="25" high="50" optimum="100"></meter></td>
-                                        </tr>
-                                    }
-                                </tbody>
-                                <tfoot></tfoot>
-                            </table>
-                        } @else {
-                            <div class="alert alert-info">No hay elementos que mostrar</div>
-                        }
-                    </div>
-                </div>
-            </div>
+
+            <!-- Aquí mostraremos el compomente concreto que queramos -->
+            <app-home></app-home>
+
         </div>
         
         <div class="col"></div>

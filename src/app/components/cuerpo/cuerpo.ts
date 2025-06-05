@@ -1,22 +1,14 @@
 import { Component } from '@angular/core';
-import { HeroeService } from '../../services/heroe.service';
+import { ListadoTabla } from "../listado-tabla/listado-tabla";
+import { ListadoTarjetas } from "../listado-tarjetas/listado-tarjetas";
+import { Home } from "../home/home";
 
 @Component({
   selector: 'app-cuerpo',
-  imports: [],
+  imports: [ListadoTabla, ListadoTarjetas, Home],
   templateUrl: './cuerpo.html',
   styleUrl: './cuerpo.css'
 })
 export class Cuerpo {
-
-  // Atributos
-  public listadoHeroes: Heroe[];
-
-  // Constructores
-  constructor(public heroeService: HeroeService) {
-    this.listadoHeroes = this.heroeService.getHeroes();
-  }
-  
-  // Métodos
 
 }
