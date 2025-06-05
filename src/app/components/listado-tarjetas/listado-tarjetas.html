@@ -1,1 +1,72 @@
-<p>listado-tarjetas works!</p>
+<!-- La etiqueta se repetirá tantas veces como elementos haya en el array heroes -->
+@for (heroe of heroes; track heroes) {
+<div class="card shadow mb-4">
+    <div class="row p-3">
+        <!-- Columna de la imagen -->
+        <div class="col-4">
+            <img class="img-fluid rounded-3 bg-dark-subtle mt-5" [src]="heroe.imagen || 'https://borilio.github.io/curso-angular/img/avatars/defaultheroe.svg'"/>
+        </div>
+
+        <!-- Columna de los datos -->
+        <div class="col-8">
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <!-- Vida -->
+                            <label for="" class="me-1"><i class="bi bi-heart-pulse"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-danger" [style.width.%]="heroe.vida" >
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <!-- Ataque -->
+                            <label for="" class="me-1"><i class="bi bi-crosshair"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-success" [style.width.%]="heroe.ataque">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <!-- Defensa -->
+                            <label for="" class="me-1"><i class="bi bi-shield"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-warning" [style.width.%]="heroe.defensa">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <!-- Poder -->
+                            <label for="" class="me-1"><i class="bi bi-lightning"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-info" [style.width.%]="(heroe.poder * 100) / 500">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+} @empty {
+    <div class="alert alert-warning">
+        Sin contenido para mostrar
+    </div>
+}
+
+<!-- Para separar el contenido del footer -->
+<div style="margin-bottom: 150px;"></div>
