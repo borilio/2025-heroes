@@ -21,7 +21,8 @@
                                 <tbody>
                                     @for(heroe of listadoHeroes; track heroe) {
                                         <tr>
-                                            <td><img class="avatar" [src]="heroe.imagen || 'https://borilio.github.io/curso-angular/img/avatars/defaultheroe.svg'"/></td>                                            <td>{{heroe.nombre}}</td>
+                                            <td><img class="avatar" [src]="heroe.imagen || 'https://borilio.github.io/curso-angular/img/avatars/defaultheroe.svg'"/></td>                                            
+                                            <td>{{heroe.nombre}}</td>
                                             <td>{{heroe.poder}}</td>
                                             <td><meter [value]="heroe.vida" min="0" max="100" low="25" high="50" optimum="100"></meter></td>
                                         </tr>

@@ -6,7 +6,12 @@ import { Pie } from "./components/pie/pie";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Cabecera, Cuerpo, Pie],
+  imports: [
+    RouterOutlet, 
+    Cabecera, 
+    Cuerpo, 
+    Pie
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
